@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/public/Content/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="/thanku" method = "post">
+
+      First Name: <input type="text" size="30" placeholder="John" name="fname"><br />
+      Last Name: <input type="text" size="30" placeholder="doe" name="lname"><br />
+      
+      email: <input type="text" size="30" placeholder="Enter your user name" name="username"><br />
+      Your Comments: <input type="range" size="30" placeholder="John" name="fname"><br /><br /><br />
+      <input type="submit" value="Submit" name="Feedback">
+    
+    </form>
+  </body>
+</html>
