@@ -5,6 +5,9 @@ let router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Login' });
 });
+router.get('/feedback', function(req, res, next) {
+  res.render('feedback', { title: 'FeedBack' });
+});
 router.post('/', function(req, res, next) {
   res.render('feedback', { title: 'FeedBack' });
 });
