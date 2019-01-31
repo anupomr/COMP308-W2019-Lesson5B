@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+
+.fieldLebel {
+	vertical-align: top;
+	text-align: right;
+}

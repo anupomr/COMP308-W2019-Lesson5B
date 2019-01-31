@@ -14,7 +14,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">COMP308</a>
+      <a class="navbar-brand" href="/"><img src="Assets/images/arlogo.png" height="40px"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,28 +22,34 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-           <% if(title=="Home"){%>
+          <% if(title=="Home"){%>
           <li class="nav-item active">
             <% } else {%>
-              <li class="nav-item">
+          <li class="nav-item">
             <% } %>
             <a class="nav-link" href="/"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
           </li>
           <% if(title=="FeedBack"){%>
-            <li class="nav-item active">
-              <% } else {%>
-                <li class="nav-item">
-              <% } %>
+          <li class="nav-item active">
+            <% } else {%>
+          <li class="nav-item">
+            <% } %>
             <a class="nav-link" href="/feedback"><i class="fa fa-comment"></i> FeedBack</a>
           </li>
           <% if(title=="About"){%>
-            <li class="nav-item active">
-              <% } else {%>
-                <li class="nav-item">
-              <% } %>
+          <li class="nav-item active">
+            <% } else {%>
+          <li class="nav-item">
+            <% } %>
             <a class="nav-link" href="#"><i class="fa fa-info"></i> About</a>
           </li>
-
+          <% if(title=="Login"){%>
+            <li class="nav-item active">
+              <% } else {%>
+            <li class="nav-item">
+              <% } %>
+              <a class="nav-link" href="/login"> <i class="fa fa-user-lock"></i> Login</a>
+            </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -56,12 +62,17 @@
   <main class="container">
     <!--Main Area-->
     <div class="jumbotron">
-      <h1 class="display-4">Welcome to <%= title %></h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+      <h1 class="display-4">Welcome to
+        <%= title %>
+      </h1>
+      <p class="lead">This is a simple feedback unit, with simple jumbotron-style component for calling extra attention to
         featured content or information.</p>
+    
+          
+       
       <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <p>This utility and content developed by Anupom Roy.</p>
+      <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/anupom-roy/" role="button">Learn more</a>
     </div>
 
   </main>
@@ -69,19 +80,8 @@
 
 
 
-  <h1>
-    <%= title %>
-  </h1>
-  <p>Welcome to
-    <%= title %>
-  </p>
-  <form method="post">
-
-    <input type="text" size="30" placeholder="Enter your user name" name="username"><br />
-    <input type="password" size="30" placeholder="Enter your password" name="password"><br />
-    <input type="submit" value="Submit" name="submit">
-
-  </form>
+  
+  
 
   <!-- JavaScript section-->
   <script src="jquery/dist/jquery.min.js"></script>
