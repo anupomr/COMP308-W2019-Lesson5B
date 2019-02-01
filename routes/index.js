@@ -26,9 +26,10 @@ router.post('/', function(req, res, next) {
   res.render('feedback', { title: 'FeedBack', Email:req.session.email});
 });
 router.post('/thanku', function(req, res, next) {
-  //req.session.email="Anupom@gmail";
-  req.session.email=req.body.txtEmail;
-  res.render('thankyou', { Email:req.session.email});
+  req.session.fName=req.body.fname;
+   req.session.lName=req.body.lname;
+  //req.session.email=req.body.txtEmail;
+  res.render('thankyou', {title: 'Thank You', firstName:req.session.fName, lastName:req.session.lName});
 });
 
 module.exports = router;

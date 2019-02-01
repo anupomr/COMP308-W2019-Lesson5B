@@ -69,9 +69,17 @@
         featured content or information.
       <br>
       <br>
-      <b>This is COMP308 Emerging Technologies (SEC. 002) Assignment 1</b>
+      
 
-
+      <% if(title=="About"){%>
+        <h2>Aupom Roy</h2>
+          E-mail: anupomr@gmail.com <br>
+          Phone: +1-647-704-7186
+          <% }else if(title=="FeedBack"){%>
+            Please Login First
+          <% } else {%>
+            <b>This is COMP308 Emerging Technologies (SEC. 002) Assignment 1</b>
+          <% } %>
 
       </p>
     
