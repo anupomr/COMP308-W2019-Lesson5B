@@ -15,7 +15,7 @@
 
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">COMP308</a>
+      <a class="navbar-brand" href="/"><img src="Assets/images/arlogo.png" height="40px"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,14 +42,14 @@
             <% } else {%>
           <li class="nav-item">
             <% } %>
-            <a class="nav-link" href="#"><i class="fa fa-info"></i> About</a>
+            <a class="nav-link" href="/about"><i class="fa fa-info"></i> About</a>
           </li>
           <% if(title=="Logout"){%>
             <li class="nav-item active">
               <% } else {%>
             <li class="nav-item">
               <% } %>
-              <a class="nav-link" href="/logout"> <i class="fa fa-user-lock"></i> Logout</a>
+              <a class="nav-link" href="/logout"> <i class="fa fa-lock"></i> Logout</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -92,7 +92,7 @@
 
             <tr>
               <td class="fieldLebel">Email: </td>
-              <td> <input id="txtEmail" type="text" size="30" placeholder=<%=title %> name="txtEmail"></td>
+              <td> <input id="txtEmail" type="text" size="30" value=<%=Email %> name="txtEmail"></td>
             </tr>
 
             <tr>
@@ -101,7 +101,7 @@
             </tr>
             <tr>
               <td></td>
-              <td><input type="submit" value="Submit" name="Feedback"></td>
+              <td><input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Submit" name="Feedback"></td>
             </tr>
           </table>
         </fieldset>

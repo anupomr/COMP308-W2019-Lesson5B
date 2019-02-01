@@ -65,8 +65,8 @@
         <h1 class="display-4">Welcome to
           <%= title %>
         </h1>
-        <p class="lead">This is a simple feedback unit, a simple jumbotron-style component for calling extra attention to
-          featured content or information.</p>         
+        <p class="lead">This is a simple  <%= title %> unit, a simple jumbotron-style component for calling extra attention to
+          featured.</p>         
         
           <form action="/" method = "post">
 
@@ -76,16 +76,19 @@
               <table  style="width: 103%">
                 <tr>
                   <td class="fieldLebel">User Name:              </td>
-                  <td> <input type="text" size="30" placeholder="Enter your user name" name="username"></td>
+                  <td> <input type="text" size="30" placeholder="Enter your email" name="username"></td>
                 </tr>
                 <tr>
                   <td class="fieldLebel">Password:</td>
                   <td><input type="password" size="30" placeholder="Enter your password" name="password"></td>
                 </tr>
-               </td> 
+                <tr>
+                    <td class="fieldLebel"></td>
+                    <td><input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Submit" name="submit"></td>
+                  </tr>
               </table>
             </fieldset>
-              <input type="submit" value="Submit" name="submit">
+              
             
             </form>
          

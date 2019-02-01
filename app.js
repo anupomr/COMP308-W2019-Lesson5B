@@ -4,6 +4,8 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+var session = require('express-session');
+
 let indexRouter = require('./routes/index');
 let thankuRouter = require('./routes/thankyou');
 
@@ -16,6 +18,18 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+//initialize the session 
+app.use(session({
+  //a session is uninitialized when it is new but not modified
+  //force a session that is "uninitialized" to be saved to the store
+  saveUninitialized: true,
+  //forces the session to be saved back to the session store
+  //even if the session was never modified during the request
+  resave: true,
+  secret: 'comp308'
+}));
+//
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
