@@ -3,7 +3,7 @@ let router = express.Router();
 
 let mongoose=require('mongoose');
 //Create a reference to the db schema
-let contact=require('../models/contact')
+let contact=require('../models/contact');
 
 //Read
 router.get('/', (req,res,next)=>{
@@ -12,9 +12,13 @@ router.get('/', (req,res,next)=>{
            return console.error(err);
        } 
        else{
-           console.log(contactList);
+           //console.log(contactList);
+           res.render('contacts/index',{
+               title: 'Contact List',
+               contactList: contactList
+           });
        }
-    })
-})
+    });
+});
 
 module.exports = router;

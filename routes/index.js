@@ -13,6 +13,9 @@ router.get('/logout', function(req, res, next) {
 router.get('/about', function(req, res, next) {
   res.render('index', { title: 'About' });
 })
+router.get('/contact', function(req, res, next) {
+  res.render('index', { title: 'Contact' });
+})
 router.get('/login', function(req, res, next) {
   
   res.render('login', { title: 'Login' });

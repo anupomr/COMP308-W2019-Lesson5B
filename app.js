@@ -6,7 +6,7 @@ let logger = require('morgan');
 
 // Database setup
 let mongoose=require('mongoose');
-let DB=require('./config/db');
+let DB = require('./config/db');
 
 //point Mongoose to the DB URI
 mongoose.connect(DB.URI);
@@ -20,8 +20,8 @@ mongoDB.once('open', ()=>{
 var session = require('express-session');
 
 let indexRouter = require('./routes/index');
-let contactRouter=require('./routes/contacts');
-let thankuRouter = require('./routes/thankyou');
+let contactRouter=require('./routes/contact');
+//let thankuRouter = require('./routes/thankyou');
 
 let app = express();
 
@@ -48,7 +48,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/', indexRouter);
-app.use('/thanku', thankuRouter);
+//app.use('/thanku', thankuRouter);
 app.use('/contact-list', contactRouter);
 
 // catch 404 and forward to error handler
