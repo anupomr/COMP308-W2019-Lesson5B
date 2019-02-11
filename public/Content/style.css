@@ -1,7 +1,4 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+
 
 a {
   color: #00B7FF;
@@ -10,4 +7,10 @@ a {
 .fieldLebel {
 	vertical-align: top;
 	text-align: right;
+}
+#bgblue{
+	background-image: url('Assets/images/blue-wave-lines-backgrounds-powerpoint.jpg');
+	background-attachment: fixed;
+	background-repeat: inherit;
+	color: #FF9900;
 }
